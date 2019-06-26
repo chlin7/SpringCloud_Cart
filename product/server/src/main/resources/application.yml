@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: product
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/springcloud_sell?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+  jpa:
+    show-sql: true
+  rabbitmq:
+      host: 192.168.100.104
+      port: 5672
+      username: guest
+      password: guest
+  cloud:
+      stream:
+        bindings:
+          myMessage:
+            group: order
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
