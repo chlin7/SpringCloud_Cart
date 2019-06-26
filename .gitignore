@@ -1,0 +1,15 @@
+/eureka-server/.idea
+/eureka-server/target
+/eureka-server/*.cmd
+/eureka-server/mvnw
+/order/target
+/order/.idea
+/order/.mvn
+/order/common/target
+/order/server/target
+/product/.mvn
+/product/mvnw.cmd
+/product/mvnw
+/product/client/target
+/product/common/target
+/product/server/target
