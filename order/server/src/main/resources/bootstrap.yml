@@ -1,0 +1,36 @@
+#spring:
+#  application:
+#    name: order
+#  cloud:
+#    config:
+#      discovery:
+#        enabled: true
+#        service-id: CONFIG
+#      profile: dev
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka
+server:
+  port: 8081
+
+spring:
+  application:
+    name: order
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: root
+    url: jdbc:mysql://localhost:3306/springcloud_sell?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+  jpa:
+    show-sql: true
+  rabbitmq:
+    host: 192.168.100.104
+    port: 5672
+    username: guest
+    password: guest
+  cloud:
+    stream:
+      bindings:
+        myMessage:
+          group: order
