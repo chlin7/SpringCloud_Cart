@@ -9,7 +9,7 @@ spring:
           username: chlin7@126.com
           password: chenhualin1990
           # 配置本地服务器缓存存储路径
-          basedir: E:/workspace/idea/imooc/basedir
+          basedir: E:/workspace/idea/imooc/config-basedir
 eureka:
   client:
     service-url:

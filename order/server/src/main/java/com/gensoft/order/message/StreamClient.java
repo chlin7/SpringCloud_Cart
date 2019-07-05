@@ -19,4 +19,7 @@ public interface StreamClient {
 
 	@Input("eeeeMsg")
 	SubscribableChannel input();
+
+	@Output("returnMessage")
+	MessageChannel outputTest();
 }

@@ -4,10 +4,14 @@ import com.gensoft.order.entity.OrderDetail;
 import com.gensoft.order.entity.OrderMaster;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.util.List;
+
 /**
  * @ desc：
  * @ Author     ：chenhl01.
  * @ Date       ：Created in 15:35 2019/6/10
  */
 public interface IOrderDetailRepository extends JpaRepository<OrderDetail,String> {
+
+	List<OrderDetail> findByOrderId(String orderId);
 }
