@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: api-gateway
+server:
+  port: 9000
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+zuul:
+  routes:
+  # /myProduct/product/list -> /product/product/list
+    aaaaaa:
+      path: /myProduct/**
+      serviceId: product
+      #设置为空，不屏蔽敏感信息，获取cookie内容
+      sensitiveHeaders:
+  #设置为空，所有服务不屏蔽敏感信息，获取cookie内容
+  sensitive-headers:
+  #简洁写法
+#    product: /myProduct/**
+  #排除某些路由
+#  ignored-patterns:
+#    - /**/product/listForOrder
+
+
+
