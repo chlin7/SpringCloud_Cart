@@ -1,5 +1,6 @@
 package com.gensoft.product.client;
 
+import com.gensoft.order.client.ProductClientFallback;
 import com.gensoft.product.common.DecreaseStockInput;
 import com.gensoft.product.common.ProductInfoOutput;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -10,7 +11,7 @@ import java.util.List;
 
 /**
  */
-@FeignClient(name = "product")
+@FeignClient(name = "product",fallback = ProductClientFallback.class)
 public interface ProductClient {
 
     @PostMapping("/product/listForOrder")

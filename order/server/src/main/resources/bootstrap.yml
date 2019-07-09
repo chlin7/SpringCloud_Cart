@@ -35,3 +35,6 @@ spring:
         myMessage:
           group: order
           content-type: application/json
+feign:
+  hystrix:
+    enabled: true
